@@ -18,31 +18,50 @@
         </div>
         <div class="block2">
             <h3>Let's do this!</h3>
-            <form action=" " method="get" id="basic-form">
+            <form action="#" method="post" id="basic-form" name="form1">
                 <div class="form-row">
-                    <label for="first-name">FIRST NAME</label>
-                    <input type="text" id="first-name" name="first-name">
-                    <label for="last-name">LAST NAME</label>
-                    <input type="text" id="last-name" name="last-name">
+                    <div style="float:left;margin-right:20px;">
+                        <label for="first-name">FIRST NAME*</label>
+                        <input type="text" id="first-name" name="first-name" required placeholder=" ">
+                    </div>
+                    <div style="float:left;">
+                        <label for="last-name">LAST NAME*</label>
+                        <input type="text" id="last-name" name="last-name" required placeholder=" ">
+                    </div>
+                    <br style="clear:both;" />
                 </div>
                 <div class="form-row">
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
-                    <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
+                    <div style="float:left;margin-right:20px;">
+                        <label for="email">EMAIL*</label>
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                    </div>
+                    <div style="float:left;">
+                        <label for="phone">PHONE NUMBER*</label>
+                        <input type="tel" id="phone" name="phone" required placeholder=" ">
+                    </div>
+                    <br style="clear:both;" />
+                </div>  
                 <div class="form-row">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password">
-                    <label for="cPassword">CONFIRM PASSWORD</label>
-                    <input type="password" id="cPassword" name="cPassword">
+                    <div style="float:left;margin-right:20px;">
+                        <label for="password">PASSWORD*</label>
+                        <input type="password" id="password" name="password" required placeholder=" ">
+                        <span></span>
+                    </div>
+                    <div style="float:left;">
+                        <label for="cPassword">CONFIRM PASSWORD*</label>
+                        <input type="password" id="cPassword" name="cPassword" required placeholder=" ">
+                        <span></span>
+                    </div>
+                    <br style="clear:both;" />
                 </div>
+                <p>Required *</p>
             </form>
         </div>
         <div class="block3">
-            <button type="submit" form="basic-form">Create Account</button>
+            <button type="submit" form="basic-form" onclick="validatePassword(document.form1.password,document.form1.cPassword)">Create Account</button>
             <p>Already have an account? <a href="https://www.google.ca">Log in</a></p>
         </div>
     </div>
+    <script src="form-validation.js"></script>
 </body>
 </html>
